@@ -1,3 +1,4 @@
 Online shoping mall
 
-곧 끝날 예정..
+
+My Cart 페이지 작성
