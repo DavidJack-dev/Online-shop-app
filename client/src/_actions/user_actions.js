@@ -59,6 +59,9 @@ export function addToCart(_id) {
         payload: request
     }
 }
+
+
+
 export function getCartItems(cartItems, userCart) {
     const request = axios.get(`/api/product/products_by_id?id=${cartItems}&type=array`)
         .then(response => {
@@ -74,10 +77,13 @@ export function getCartItems(cartItems, userCart) {
                     }
                 })
             })
+
             return response.data;
         });
+
     return {
         type: GET_CART_ITEMS_USER,
         payload: request
     }
 }
+

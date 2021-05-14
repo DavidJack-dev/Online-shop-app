@@ -19,9 +19,10 @@ router.get("/auth", auth, (req, res) => {
         role: req.user.role,
         image: req.user.image,
         cart: req.user.cart,
-        history: req.user.history   
+        history: req.user.history
     });
 });
+
 
 router.post("/register", (req, res) => {
 
@@ -70,11 +71,10 @@ router.get("/logout", auth, (req, res) => {
     });
 });
 
+
 router.get('/addToCart', auth, (req, res) => {
 
     User.findOne({ _id: req.user._id }, (err, userInfo) => {
-        
-        
         let duplicate = false;
 
         console.log(userInfo)
