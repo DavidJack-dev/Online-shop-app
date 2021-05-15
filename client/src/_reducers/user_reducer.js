@@ -4,9 +4,7 @@ import {
     AUTH_USER,
     LOGOUT_USER,
     ADD_TO_CART_USER,
-    GET_CART_ITEMS_USER,
-    REMOVE_CART_ITEM_USER,
-    ON_SUCCESS_BUY_USER
+    GET_CART_ITEMS_USER
 } from '../_actions/types';
 
 
@@ -21,16 +19,16 @@ export default function (state = {}, action) {
         case LOGOUT_USER:
             return { ...state }
         case ADD_TO_CART_USER:
-            return {
-                ...state, userData: {
-                    ...state.userData,
-                    cart: action.payload
+           return {
+                    ...state, userData: {
+                        ...state.userData,
+                        cart: action.payload
+                    }
                 }
-            }
         case GET_CART_ITEMS_USER:
-            return {
-                ...state, cartDetail: action.payload
-            }
+           return {
+                    ...state, cartDetail: action.payload
+                }
 
         default:
             return state;

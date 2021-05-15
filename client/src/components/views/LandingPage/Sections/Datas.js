@@ -27,8 +27,13 @@ const price = [
     },
     {
         "_id": 5,
-        "name": "More than $300",
-        "array": [300, 1500000]
+        "name": "$300 to $390",
+        "array": [280, 299]
+    },
+    {
+        "_id": 5,
+        "name": "More than $400",
+        "array": [400, 1500000]
     }
 ]
 
@@ -62,6 +67,10 @@ const continents = [
     {
         "_id": 7,
         "name": "Antarctica"
+    },
+    {
+        "_id": 8,
+        "name": "Arctic"
     }
 ]
 
