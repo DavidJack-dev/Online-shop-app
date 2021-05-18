@@ -78,8 +78,6 @@ function LandingPage() {
             </Card>
         </Col>
     })
-
-
     const showFilteredResults = (filters) => {
 
         const variables = {
@@ -153,14 +151,12 @@ function LandingPage() {
             <Row gutter={[16, 16]}>
                 <Col lg={12} xs={24} >
                     <CheckBox
-                        key={continents}
                         list={continents}
                         handleFilters={filters => handleFilters(filters, "continents")}
                     />
                 </Col>
                 <Col lg={12} xs={24}>
                     <RadioBox
-                        key={price}
                         list={price}
                         handleFilters={filters => handleFilters(filters, "price")}
                     />

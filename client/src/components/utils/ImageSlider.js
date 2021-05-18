@@ -12,7 +12,7 @@ function ImageSlider(props) {
                             src={`http://localhost:5000/${image}`} alt="productImage" />
                     </div>
                 ))}
-            </Carousel> 
+            </Carousel>
         </div>
     )
 }

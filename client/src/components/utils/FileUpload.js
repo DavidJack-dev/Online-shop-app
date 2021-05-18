@@ -7,11 +7,13 @@ function FileUpload(props) {
     const [Images, setImages] = useState([])
 
     const onDrop = (files) => {
+
         let formData = new FormData();
         const config = {
-            header: { 'content-type': 'multipart/form-data'}
+            header: { 'content-type': 'multipart/form-data' }
         }
         formData.append("file", files[0])
+        //save the Image we chose inside the Node Server 
         Axios.post('/api/product/uploadImage', formData, config)
             .then(response => {
                 if (response.data.success) {

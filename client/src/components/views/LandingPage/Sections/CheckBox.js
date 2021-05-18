@@ -1,10 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Checkbox, Collapse } from 'antd';
-import { useState } from 'react';
 
 const { Panel } = Collapse
-
-
 
 
 function CheckBox(props) {
@@ -24,6 +21,8 @@ function CheckBox(props) {
 
         setChecked(newChecked)
         props.handleFilters(newChecked)
+        //update this checked information into Parent Component 
+
     }
 
     const renderCheckboxLists = () => props.list && props.list.map((value, index) => (
@@ -36,10 +35,11 @@ function CheckBox(props) {
             <span>{value.name}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </React.Fragment>
     ))
+
     return (
         <div>
-            <Collapse defaultActiveKe={['0']}>
-                <Panel header="continents" key="1">
+            <Collapse defaultActiveKey={['0']} >
+                <Panel header="Continents" key="1">
                     {renderCheckboxLists()}
                 </Panel>
             </Collapse>
