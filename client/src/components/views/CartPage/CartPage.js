@@ -86,7 +86,6 @@ function CartPage(props) {
         <div style={{ width: '85%', margin: '3rem auto' }}>
             <h1>My Cart</h1>
             <div>
-}
                 <UserCardBlock
                     products={props.user.cartDetail}
                     removeItem={removeFromCart}

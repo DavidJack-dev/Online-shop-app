@@ -35,7 +35,10 @@ function RightMenu(props) {
       <Menu mode={props.mode}>
 
         <Menu.Item key="history">
-          <a href="/history">History</a>
+          <a href="/history" style={{marginRight: -22, color: '#667777'}}>
+
+        History
+          </a>
         </Menu.Item>
 
         <Menu.Item key="upload">
