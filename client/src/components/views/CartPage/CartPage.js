@@ -5,7 +5,7 @@ import {
     removeCartItem,
     onSuccessBuy
 } from '../../../_actions/user_actions';
-import UserCardBlock from './Setctions/UserCardBlock';
+import UserCardBlock from './Sections/UserCardBlock';
 import { Result, Empty } from 'antd';
 import Axios from 'axios';
 import Paypal from '../../utils/Paypal';
@@ -18,10 +18,11 @@ function CartPage(props) {
     useEffect(() => {
 
         let cartItems = [];
-        
         if (props.user.userData && props.user.userData.cart) {
+          
             if (props.user.userData.cart.length > 0) {
                 props.user.userData.cart.forEach(item => {
+                    console.log("제발 뭐자?", cartItems)
                     cartItems.push(item.id)
                 });
                 dispatch(getCartItems(cartItems, props.user.userData.cart))
@@ -85,7 +86,7 @@ function CartPage(props) {
         <div style={{ width: '85%', margin: '3rem auto' }}>
             <h1>My Cart</h1>
             <div>
-
+}
                 <UserCardBlock
                     products={props.user.cartDetail}
                     removeItem={removeFromCart}
