@@ -1,4 +1,8 @@
-Online shoping mall
+# 여행 예약서비스앱
+
+---
+
+## 메인 화면
+[첫화면](Images/첫화면.png)
 
 
-My Cart 페이지 작성
