@@ -1,10 +1,9 @@
-![Uploading 첫화면.png…]()
+
 # Travel reservation service app
 
 ---
 
-## 메인 화면
-[Uploading 첫화면.png…]()
-
+### 1. 메인 화면
+[화면](./Images/첫화면.png)
 
 
